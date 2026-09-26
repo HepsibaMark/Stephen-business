@@ -1,0 +1,375 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f7f7f2;
+  color: #222;
+}
+
+.app-header {
+  background: #2e7d32;
+  color: white;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.logout-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.login-screen {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f7f2;
+}
+
+.login-card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  width: 320px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.login-card h1 {
+  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.login-card label {
+  display: block;
+  text-align: left;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 12px 0 4px;
+}
+
+.login-card input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-card button {
+  width: 100%;
+  margin-top: 16px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.login-card button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.login-card .link-btn {
+  background: none;
+  color: #2e7d32;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+.test-mode-banner {
+  background: #fff8e1;
+  color: #8a6d00;
+  border: 1px solid #ffe082;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 12px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.login-error {
+  color: #c62828;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.error-banner {
+  background: #ffebee;
+  color: #c62828;
+  padding: 10px 16px;
+  margin: 8px 16px 0;
+  border-radius: 6px;
+}
+
+.app-body {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.catalog {
+  flex: 1;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 14px;
+}
+
+.product-card {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-image {
+  width: 100%;
+  height: 90px;
+  object-fit: contain;
+  background: #f0f0f0;
+  border-radius: 6px;
+}
+
+.product-image.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-name-en {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.product-name-ta {
+  font-size: 12px;
+  color: #666;
+}
+
+.product-price {
+  font-weight: 700;
+  color: #2e7d32;
+}
+
+.unit-label {
+  font-weight: 400;
+  color: #888;
+  font-size: 12px;
+}
+
+.weight-options {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.weight-btn {
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 6px;
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.weight-btn.selected {
+  background: #2e7d32;
+  color: white;
+  border-color: #2e7d32;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.counter button {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.add-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.cart-sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.address-field {
+  background: white;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.address-field label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.address-field textarea {
+  width: 100%;
+  min-height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+  font-size: 13px;
+  resize: vertical;
+}
+
+.cart {
+  background: white;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.cart h2 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.cart-empty {
+  color: #888;
+  font-size: 13px;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item-name {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.cart-item-qty {
+  font-size: 12px;
+  color: #888;
+}
+
+.cart-item-price {
+  margin-left: auto;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.remove-btn {
+  border: none;
+  background: none;
+  color: #c62828;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  padding: 8px 0;
+  border-top: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.checkout-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.order-success {
+  max-width: 420px;
+  margin: 80px auto;
+  text-align: center;
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.order-success button {
+  margin-top: 16px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+}
