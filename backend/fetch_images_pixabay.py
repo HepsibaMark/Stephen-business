@@ -22,8 +22,7 @@ import requests
 from dotenv import load_dotenv
 
 load_dotenv()
-
-API_BASE = "http://localhost:8000"
+API_BASE = "https://stephen-business.onrender.com"
 PIXABAY_API = "https://pixabay.com/api/"
 PIXABAY_KEY = os.getenv("PIXABAY_API_KEY")
 

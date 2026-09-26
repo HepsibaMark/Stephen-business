@@ -1,7 +1,6 @@
 // Base URL of your FastAPI backend. Change this if you deploy the backend
 // somewhere other than localhost.
-const API_BASE = 'http://localhost:8000'
-
+const API_BASE = 'https://stephen-business.onrender.com'
 export async function fetchProducts() {
   const res = await fetch(`${API_BASE}/products/`)
   if (!res.ok) throw new Error('Failed to load products')

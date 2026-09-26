@@ -10,7 +10,6 @@ Usage:
 import requests
 
 API_BASE = "http://localhost:8000"
-
 # (name_en, name_ta, unit_type, price, weight_options_grams or None)
 PRODUCTS = [
     ("Onion (Big)", "பெரிய வெங்காயம்", "kg", 65.00, [250, 500, 750, 1000]),
